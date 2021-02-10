@@ -17,6 +17,7 @@ module.exports = {
     jest: true,
   },
   parserOptions: {
+    requireConfigFile: false,
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {

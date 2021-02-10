@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-lfe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "自定义eslint规则库",
   "repository": {
     "type": "git",
