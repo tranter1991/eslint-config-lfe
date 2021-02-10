@@ -176,7 +176,7 @@ export const getBrowserInfo: () => IBrowser = (): IBrowser => {
       };
     }
   }
-  // eslint-disable-next-line
+
   if (/Safari/.test(ua) && /Android[\s\/]([\d\.]+)/.test(ua)) {
     matchs = ua.match(/Android[\s\/]([\d\.]+)/);
     if (matchs !== null) {
@@ -187,13 +187,13 @@ export const getBrowserInfo: () => IBrowser = (): IBrowser => {
       };
     }
   }
-  /* eslint-disable */
   if (
-    /iPhone|iPad|iPod/.test(ua) &&
-    /Safari/.test(ua) &&
-    /Version\/([\d\.]+)/.test(ua)
+    /iPhone|iPad|iPod/.test(ua)
+      && /Safari/.test(ua)
+    && /Version\/([\d\.]+)/.test(ua)
   ) {
     matchs = ua.match(/Version\/([\d\.]+)/);
+
     if (matchs !== null) {
       return {
         name: 'Safari',
@@ -207,13 +207,12 @@ export const getBrowserInfo: () => IBrowser = (): IBrowser => {
         return {
           name: 'iOS Webview',
           isWebview: true,
-          version: matchs[0].replace(/\_/g, '.'),
+          version: matchs[0].replace(/\_/g, '.')
         };
       }
     }
   }
 
-  /* eslint-enable */
   return unknown();
 };
 

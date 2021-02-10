@@ -6,7 +6,7 @@ module.exports = {
     './rules/react',
     './rules/react-a11y',
   ].map(require.resolve),
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     commonjs: true,
